@@ -1,63 +1,23 @@
-function isPalindrome(word) {
-  // Write your algorithm here
-}
-
-/* 
-  Add your pseudocode here
-  Define a function named isPalindrome that takes in a string str
-Create a variable named reversed and assign to it the result of calling str split with an empty string, reverse, and join with an empty string
-Return the result of comparing reversed to str
-
-*/
-
-/*
-  Add written explanation of your solution here
-  Write a function that takes in a string and returns true if the string is a palindrome, meaning it is the same forwards and backwards.
-
-Write Your Own Test Cases:
-
-Input: "mom"
-Expected: true
-
-Input: "tacocat"
-Expected : true
-
-Input: "awesome"
-Expected: false
-*/
-/* what i understood in code form
 function isPalindrome(str) {
+  // Reverse the string
   const reversed = str.split('').reverse().join('');
+
+  // Check if the reversed string is the same as the original string
   return reversed === str;
 }
+
+// Test the function
+console.log(isPalindrome('madam')); // should print true
+console.log(isPalindrome('robot')); // should print false
+console.log(isPalindrome('racecar')); // should print true
+console.log(isPalindrome('level')); // should print true
+console.log(isPalindrome('hello')); // should print false
+
+/*
+Pseudocode:
+
+1. Define a function called "isPalindrome" that takes in a string called "str".
+2. Within the function, create a variable called "reversed" which is the result of splitting "str" into an array of characters, reversing the array, and joining the array back into a string.
+3. Return the result of checking if "reversed" is equal to "str".
 */
-// You can run `node index.js` to view these console logs
-if (require.main === module) {
-  // add your own custom tests in here
-  function isPalindrome(str) {
-    // Reverse the input string
-    const reversed = str.split('').reverse().join('');
-  
-    // Compare the reversed string to the original input string
-    return reversed === str;
-  }
-  
-  console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
 
-  console.log("");
-
-  console.log("Expecting: false");
-  console.log("=>", isPalindrome("robot"));
-
-  function isPalindrome(str) {
-  // Reverse the input string
-  var reversed = str.split('').reverse().join('');
-
-  // Compare the reversed string to the original input string
-  return reversed == str;
-}
-
-}
-
-module.exports = isPalindrome;
